@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" client="site" method="upgrade">
+    <name>Za Trigger menu</name>
+    <author>Andrey</author>
+    <authorEmail>design@za-studio.ru</authorEmail>
+	<copyright>Copyright (C) Za-studio.net. All rights reserved.</copyright>
+    <creationDate>iuni 2014</creationDate>
+    <authorUrl>www.za-studio.net</authorUrl>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <version>1</version>
+    <description> 
+	<![CDATA[
+    
+	<a href="http://za-studio.net" style="float:left;"><img src="/modules/mod_za_trigger_menu/css/logo.png" /></a>Za Trigger menu free For Joomla! Module let your joomla more elegant!<br/> <a href="http://www.za-studio.net/index.php/en/template/premium-templates-joomla">Templates</a><br/>
+	http://za-studio.net
+	<a href="http://www.za-studio.net/index.php/extension/modules-for-joomla">More extension..</a>
+    <br/>
+    ]]>
+	</description>
+    <files>
+        <filename>mod_za_trigger_menu.xml</filename>
+        <filename module="mod_za_trigger_menu">mod_za_trigger_menu.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+		              <folder>css</folder>
+        
+    </files>
+
+    
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="menutype"
+					type="menu"
+					label="Select Menu"
+					description="Select a menu in the list" />
+                                                                           
+				<field
+					name="startLevel"
+					type="list"
+					default="1"
+					label="Start Level"
+					description="Level to start rendering the menu at. Setting the start and end levels to the same # and setting 'Show Sub-menu Items' to yes will only display that single level."
+				>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="endLevel"
+					type="list"
+					default="0"
+					label="End Level"
+					description="Level to stop rendering the menu at. If you choose 'All', all levels will be shown depending on 'Show Sub-menu Items' setting."
+					>
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="showAllChildren"
+					type="radio"
+					default="1"
+					label="Show Sub-menu Items"
+					description="Expand the menu and make its sub-menu items always visible.">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				<field
+					name="loadJQuery"
+					type="radio"
+					default="0"
+					label="JQuery is load"
+					description="Set 'Yes', if you do not load JQuery anywhere.">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+			
+<field name="bgtrigger" class="" type="color" default="#000000" label="Background" description="Background  menu" />
+
+<field name="fontcolor" class="" type="color" default="#fff" label="Color font" description="Color font and trigger" />
+
+
+
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="tag_id"
+					type="text"
+					label="Menu Tag ID"
+					description="An ID attribute to assign to the FORM tag of the menu (optional)" />
+
+				<field
+					name="class_sfx"
+					type="text"
+					label="Menu Class Suffix"
+					description="A suffix to be applied to the CSS class of the menu items" />
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
