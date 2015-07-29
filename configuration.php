@@ -1,6 +1,6 @@
 <?php
 class JConfig {
-	public $offline = '0';
+	public $offline = '1';
 	public $offline_message = 'This site is down for maintenance.<br /> Please check back again soon.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
@@ -13,9 +13,9 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
 	public $host = 'localhost';
-	public $user = 'GDMC_access';
-	public $password = 'm6n2CJC7x8fjQ4Uv';
-	public $db = 'GDMC_webpage';
+	public $user = 'gdmchall_access';
+	public $password = '}RgxHsvCTknP';
+	public $db = 'gdmchall_webpage';
 	public $dbprefix = 'vfkn0_';
 	public $live_site = '';
 	public $secret = 'ntHN9OXmqWSjx2sg';
