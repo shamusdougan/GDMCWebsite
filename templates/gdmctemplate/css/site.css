@@ -17,7 +17,7 @@ body
 .top_menu
 {
 	
-	padding-top: 50px;
+	padding-top: 10px;
 	width: 100%;
 	
 	z-index: 10;
@@ -30,8 +30,8 @@ body
 	margin-right: auto;
 	margin-left: auto;
 	width: 600px;
-	background-color:blue;
-	background: rgba(0, 0, 0, 0.5);
+	
+	background: rgba(0, 0, 0, 0.6);
 }
 
 .top_menu_content_title
@@ -46,7 +46,13 @@ body
 .top_menu_content_menu
 {
 	width: 100%;
-	background-color: red;
+}
+
+.top_menu_toggle
+{	
+	padding-top: 5px;
+	width:100%;
+	
 }
 
 .logoTitle
@@ -71,31 +77,42 @@ body
 	white-space: nowrap;
 }
 
-.left_menu_toggle{
-	height: 100%;
-	width: 20px;
-	float: left;
+.top_menu_toggle{
+	width: 100%;
+	
 	
 }
 
-.left_menu_toggle:hover{
+.top_menu_toggle:hover{
 	background: rgba(0, 0, 0, 0.6);
 	
 }
 
-.left_menu_left_arrow{
-	height: 40px;
+.top_menu_toggle_wrapper
+{
+	width: 100%;
+	padding-top: 10px;
+}
+
+
+.top_menu_down_arrow{
+	height: 20px;
 	width: 20px;
-	background-image: url("../icons/left_arrow.png");
-	background-size: 20px 40px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("../icons/down_arrow.png");
+	background-size: 20px 20px;
 	
 }
 
-.left_menu_right_arrow{
-	height: 40px;
+.top_menu_up_arrow{
+	height: 20px;
 	width: 20px;
-	background-image: url("../icons/right_arrow.png");
-	background-size: 20px 40px;
+	margin-left: auto;
+	margin-right: auto;
+
+	background-image: url("../icons/up_arrow.png");
+	background-size: 20px 20px;
 	
 }
 
@@ -108,7 +125,7 @@ body
 
 .content_main
 {
-	width: calc(100% - 250px);
+	width: 100%;
 	float: left;
 	height: 100%;
 	padding-top:50px;
@@ -127,9 +144,12 @@ body
 
 .sapient_transparent_background
 {
-	background: rgba(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 0.7);
+	
 	padding-left: 5px;
 	padding-right: 5px;
+	
+	padding-bottom: 10px;
 }
 
 #slideshow, img.bgM {

@@ -617,11 +617,11 @@ class modSlideshowckHelper {
 		
 		if ($size) {
 			if (JFile::exists($thumbfile)) {
-				$thumbsize = getimagesize(JPATH_ROOT . '/' . $thumbfile);
-				if ($thumbsize[0] == $x || $thumbsuffix == '') {
-					//echo 'miniature existante';
-					return $thumbfile;
-				}
+				return $thumbfile;
+				// $thumbsize = getimagesize(JPATH_ROOT . '/' . $thumbfile);
+				// if ($thumbsize[0] == $x || $thumbsuffix == '') {
+					// return $thumbfile;
+				// }
 			}
 			
 			$thumbfolder = str_replace(JFile::getName($file), $thumbpath . "/", $filetmp);

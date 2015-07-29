@@ -28,6 +28,7 @@ $catTitle = $db->loadResult();
 
 
 ?>
+
 <div class='sapient_transparent_background'>
 <div class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Article">
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
@@ -38,12 +39,7 @@ $catTitle = $db->loadResult();
 	
 	<div class='projectslideshow_web'>
 	<div class="sap_article_title_bar">
-		<div class='sap_article_title_bar_nav'>
-			<A Href='<?php echo $catRoute; ?>'>
-				<div class='sap_article_title_nav_arrow'></div>
-				<div class='sap_article_title_nav_description'><?php echo $catTitle; ?></div>
-		</A>
-		</div>
+		
 		<div class='sap_article_title_bar_content'>
 		<h1> <?php echo $this->escape($this->item->title); ?> </h1>
 		</div>
@@ -193,11 +189,7 @@ $catTitle = $db->loadResult();
 	
 	<?php echo $this->item->event->afterDisplayContent; ?>
 </div>
-<div class='sap_article_footer_nav'><a href='<?php echo $catRoute; ?>'>
-	<div class='sap_article_footer_nav_arrow'></div>
-	<div class='sap_article_footer_nav_description'><?php echo $catTitle; ?>
-	</div></a>
-</div>
+
 </div>
 
 

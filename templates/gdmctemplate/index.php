@@ -17,14 +17,23 @@ $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template .'/css/arti
 $doc->addScript($this->baseurl . '/templates/' . $this->template .'/js/jquery.cycle.lite.js');	
 require_once __DIR__ . '/library.php';
 
+//echo $this->baseurl . '/templates/' . $this->template .'/js/jquery.cycle.lite.js';
 
 //place different backgrounds for different pages
 $filelist = array();
 $imagePath = "images/backgrounds/";
 $imagePath2 = "images/background_blackwhite/";
-$filelist = get_backgroundlist();	
+
+if($menuID == 143) //principals	
+	{
+	$filelist[] = $imagePath2."street_view_bw.jpg";
+	}
+else{
+	$filelist = get_backgroundlist();		
+}	
+
 		
-//	echo $menuID."<br>";
+	echo $menuID."<br>";
 
 
 function isMobile() {
@@ -46,11 +55,11 @@ function isMobile() {
 <script> 
 	jQuery(document).ready(function(){
 
-		jQuery("#menu_toggle").click(function() {
-	   		jQuery("#menu").animate({
-	            width: 'toggle'		
+		jQuery("#top_menu_toggle").click(function() {
+	   		jQuery("#sap_content_container").animate({
+	            height: 'toggle'		
 			});
-			jQuery("#nav_icon").toggleClass("left_menu_left_arrow left_menu_right_arrow");
+			jQuery("#nav_icon").toggleClass("top_menu_up_arrow top_menu_down_arrow");
 		});
 
 	});
@@ -64,17 +73,9 @@ function isMobile() {
 				fx: 'fade',
 				pager: '#smallnav', 
 				pause:   1, 
-				speed: 2000,
-				timeout:  3500 
-				});		
-				jQuery('#slideshow_mobile').cycle({
-				fx: 'fade',
-				pager: '#smallnav', 
-				pause:   1, 
-				speed: 2000,
+				speed: 5000,
 				timeout:  3500 
 				});			
-				
 		});
 		
 	
@@ -89,7 +90,7 @@ function isMobile() {
 
 
 <div class='body_wrapper'>
-	<Div  class='top_menu'>
+	<div  class='top_menu'>
 		<div class='top_menu_content_wrapper'>
 			<div class='top_menu_content_title'>
 				<img src='images/square_and_compass_Masonic_symbol_white.png' width='150px' height='150px'><br>
@@ -98,7 +99,15 @@ function isMobile() {
 			<div class='top_menu_content_menu'>
 				<jdoc:include type="modules" name="top_main_menu" />
 			</div>
+				
+			<div class='top_menu_toggle_wrapper'>
+				<div id='top_menu_toggle' class='top_menu_toggle'>
+					<div id='nav_icon' class='top_menu_up_arrow'></div>
+				</div>
+			</div>
 		</div>
+			
+	
 		
 	</div>
 	<div class='content_main'>
@@ -118,7 +127,7 @@ function isMobile() {
 
 
 	
-		<div class='content_body'>	
+		<div id='sap_content_container' class='content_body'>	
 			<?php if(!isMobile()){ ?>
 				<jdoc:include type="component" />
 			<?php } ?>
@@ -134,33 +143,6 @@ function isMobile() {
 	
 
 
-
-<div class='body_wrapper_mobile'>
-	<div class='mobile_body'>
-
-		<div id="slideshow_mobile">
-			<?php
-			foreach($filelist as $filename){
-				echo "<image src='/".$filename."' class='bgM'/>\n";
-				}
-			?>
-		</div>
-
-		<div class='mobile_head_wrapper'>
-			<div class='mobile_logoTitle' ><img src='<? echo $this->baseurl . '/templates/' . $this->template; ?>/images/MMA_Logo_notext.jpg'><br>MICHAEL MORRIS ARCHITECTS</div>	
-			<div class='mobile_menu_wrapper'><jdoc:include type="modules" name="mobile_menu" /></div>	
-		</div>
-	
-	
-		<div class='mobile_main_content'>
-			
-			<?php if(isMobile()){ ?>
-				<jdoc:include type="component" />
-			<?php } ?>
-			
-		</div>
-	</div>
-</div>
 
 </body>
 </html>

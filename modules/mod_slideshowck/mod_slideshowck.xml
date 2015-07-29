@@ -11,7 +11,7 @@
 	<license>GNU/GPL 3 http://www.gnu.org/licenses/gpl.html</license>
 	<authorEmail>ced1870@gmail.com</authorEmail>
 	<authorUrl>http://www.joomlack.fr</authorUrl>
-	<version>1.4.17</version>
+	<version>1.4.20</version>
 	<description>MOD_SLIDESHOWCK_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_slideshowck">mod_slideshowck.php</filename>

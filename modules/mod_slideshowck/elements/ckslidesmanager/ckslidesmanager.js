@@ -412,7 +412,8 @@ jQuery(document).ready(function() {
 	script.setAttribute('type', 'text/javascript');
 	script.text = "Joomla.submitbutton = function(task){"
 			+ "storeslideck();"
-			+ "if (task == 'module.cancel' || document.formvalidator.isValid(document.id('module-form'))) {	Joomla.submitform(task, document.getElementById('module-form'));"
+			+ "var form = document.getElementById('modules-form') || document.getElementById('module-form');"
+			+ "if (task == 'module.cancel' || task == 'config.cancel.modules' || document.formvalidator.isValid(form)) {	Joomla.submitform(task, form);"
 			+ "if (self != top) {"
 			+ "window.top.setTimeout('window.parent.SqueezeBox.close()', 1000);"
 			+ "}"

@@ -95,21 +95,24 @@ switch ($params->get('navigation', '2')) {
 	case 0:
 		// aucune
 		$navigation = "navigationHover: false,
-                navigation: false,
-                playPause: false,";
+				mobileNavHover: false,
+				navigation: false,
+				playPause: false,";
 		break;
 	case 1:
 		// toujours
 		$navigation = "navigationHover: false,
-                navigation: true,
-                playPause: true,";
+				mobileNavHover: false,
+				navigation: true,
+				playPause: true,";
 		break;
 	case 2:
 	default:
 		// on mouseover
 		$navigation = "navigationHover: true,
-                navigation: true,
-                playPause: true,";
+				mobileNavHover: true,
+				navigation: true,
+				playPause: true,";
 		break;
 }
 

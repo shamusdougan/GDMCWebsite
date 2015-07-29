@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade" >
+    <name>COM_SWMENUFREE</name>
+    <version>8.5</version>
+    <creationDate>JUL 2015</creationDate>
+    <author>Sean White</author>
+    <authorEmail>sean@swmenupro.com</authorEmail>
+    <authorUrl>http://www.swmenupro.com</authorUrl>
+    <copyright>This Component is Proprietry Software</copyright>
+    <license></license>
+    <description>Joomla DHTML Menu Component</description>
+
+
+
+   <files>
+       
+        <filename>index.html</filename>
+       
+    </files>
+
+    <scriptfile>scriptfile.php</scriptfile>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">install/install.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+      <sql>
+            <file driver="mysql" charset="utf8">install/uninstall.sql</file>
+        </sql>
+    </uninstall>
+
+		
+   <administration>
+        <menu img="components/com_swmenufree/images/swmenupro_icon.png" >COM_SWMENUFREE</menu>
+		<files folder="admin">
+			<filename>admin.swmenufree.html.php</filename>
+            <filename>swmenufree.php</filename>
+			<filename>preview.php</filename>
+            <filename>readme.txt</filename>
+          
+			<folder>install</folder>
+			<folder>css</folder>
+			<folder>images</folder>
+			<folder>js</folder>
+			<folder>language</folder>
+			<folder>module</folder>
+			<folder>pcl</folder>
+          
+       </files>
+      
+<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_swmenufree.sys.ini</language>
+		</languages>
+       
+       
+    </administration>
+
+</extension>
