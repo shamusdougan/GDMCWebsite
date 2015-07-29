@@ -33,7 +33,7 @@ else{
 }	
 
 		
-	echo $menuID."<br>";
+//	echo $menuID."<br>";
 
 
 function isMobile() {
@@ -93,7 +93,7 @@ function isMobile() {
 	<div  class='top_menu'>
 		<div class='top_menu_content_wrapper'>
 			<div class='top_menu_content_title'>
-				<img src='images/square_and_compass_Masonic_symbol_white.png' width='150px' height='150px'><br>
+				<img src='images/square_and_compass_Masonic_symbol_white.png' width='100px' height='100px'><br>
 				Greensborough Masonic Centre 			
 			</div>
 			<div class='top_menu_content_menu'>

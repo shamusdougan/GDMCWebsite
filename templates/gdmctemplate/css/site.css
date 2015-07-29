@@ -128,7 +128,7 @@ body
 	width: 100%;
 	float: left;
 	height: 100%;
-	padding-top:50px;
+	padding-top:20px;
 	
 }
 
@@ -598,4 +598,10 @@ sap_disabled li{
 	margin-left: auto;
 	text-align: center;
 	padding-top: 5px;
+}
+
+.sap_bookingform
+{
+	background-color: white;
+	color: black;
 }
